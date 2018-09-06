@@ -12,7 +12,6 @@ const IsogramFinder = function (word) {
 
 
 IsogramFinder.prototype.isIsogram = function () {
-    debugger
     const wordAsLowCase =  this.word.toLowerCase();
     const wordAsArrayLowCase = wordAsLowCase.split('');
 
@@ -23,8 +22,12 @@ IsogramFinder.prototype.isIsogram = function () {
             uniqueWordAsArrayLowCase.push(letter);
         }
     })
+//  debugger
+    let wordConstructedBack = wordAsArrayLowCase.join("");
+    let uniqueWordConstructedBack = uniqueWordAsArrayLowCase.join("");
 
-    if (uniqueWordAsArrayLowCase ===  wordAsArrayLowCase){
+
+    if (wordConstructedBack == uniqueWordConstructedBack){
         return true;
     }
     return false;
